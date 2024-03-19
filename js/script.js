@@ -29,10 +29,10 @@ window.addEventListener("resize", function () {
 indicatorContainer.addEventListener("click", function (e) {
   const clicked = e.target;
   if (!clicked.dataset.indNum) return;
-  indicators.forEach((ind) => (ind.src = "../images/empty-circle.svg"));
-  clicked.src = clicked.src = "../images/empty-circle.svg"
-    ? "../images/circle.svg"
-    : "../images/circle.svg";
+  indicators.forEach((ind) => (ind.src = "images/empty-circle.svg"));
+  clicked.src = clicked.src = "images/empty-circle.svg"
+    ? "images/circle.svg"
+    : "images/circle.svg";
   slideHandler(clicked.dataset.indNum);
 });
 

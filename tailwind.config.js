@@ -3,9 +3,6 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
-      backgroundImage: {
-        simplify: "url('../images/bg-simplify-section-desktop.svg')",
-      },
       colors: {
         brightRed: "hsl(12, 88%, 59%)",
         hoveredBrightRed: "hsl(12, 87%, 70%)",
