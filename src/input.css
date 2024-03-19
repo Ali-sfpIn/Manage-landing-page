@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+## Colors
+
+### Primary
+
+Bright Red: hsl(12, 88%, 59%)
+Dark Blue: hsl(228, 39%, 23%)
+
+### Neutral
+
+Dark Grayish Blue: hsl(227, 12%, 61%)
+Very Dark Blue: hsl(233, 12%, 13%)
+Very Pale Red: hsl(13, 100%, 96%)
+Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+
+- Font size: 16px
+
+### Font
+
+- Family: [Be Vietnam Pro](https://fonts.google.com/specimen/Be+Vietnam+Pro)
+- Weights: 400, 500, 700
+
+*/
+@layer components {
+  .btn {
+    @apply rounded-3xl font-bold cursor-pointer hover:bg-hoveredBrightRed transition-all duration-300 bg-brightRed shadow-brightRedBox text-white px-8 py-3 sm:text-[15px]  md:text-xs xl:text-base whitespace-nowrap small:text-[12px] small:w-24 small:px-4 md:w-auto sm:w-32;
+  }
+  .nav-item {
+    @apply cursor-pointer hover:text-lightGray transition-all duration-300 sm:text-[12px] md:text-xs xl:text-base whitespace-nowrap small:text-[8px];
+  }
+  .slide-shower {
+    @apply opacity-100 transition-opacity duration-300;
+  }
+}
+
+body {
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-size: 800px;
+  background-position: 90% -25%;
+  cursor: context-menu;
+  font-family: "Be Vietnam Pro";
+  color: #f25f3a;
+}
+
+.fourth-section {
+  background-image: url("../images/bg-simplify-section-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.icon-container img {
+  fill: white;
+  color: hsl(11, 73%, 90%);
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px 2800px #141414a3 inset;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 388%;
+}
