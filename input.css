@@ -43,7 +43,7 @@ Very Light Gray: hsl(0, 0%, 98%)
 }
 
 body {
-  background-image: url("../images/bg-tablet-pattern.svg");
+  background-image: url("images/bg-tablet-pattern.svg");
   background-size: 800px;
   background-position: 90% -25%;
   cursor: context-menu;
@@ -52,7 +52,7 @@ body {
 }
 
 .fourth-section {
-  background-image: url("../images/bg-simplify-section-desktop.svg");
+  background-image: url("images/bg-simplify-section-desktop.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
