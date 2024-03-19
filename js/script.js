@@ -19,13 +19,26 @@ const slideHandler = function (slideNum) {
   activeSlide.classList.remove("hidden");
 };
 
+const toggler = function (state) {
+  hiddenMenu.classList.toggle("-translate-y-60");
+  menuToggle.querySelector("img").src =
+    menuToggle.querySelector("img").src ===
+    "http://127.0.0.1:5500/images/menu-icon.svg"
+      ? "http://127.0.0.1:5500/images/xMark.svg"
+      : "http://127.0.0.1:5500/images/menu-icon.svg";
+  if (state) return overlay.classList.toggle("hidden");
+
+  overlay.classList.toggle("hidden");
+};
+
 // EVENT HANDLERS
 window.addEventListener("resize", function () {
   if (document.documentElement.clientWidth > 768)
     return slides.forEach((slide) => slide.classList.remove("hidden"));
   slideHandler(1);
 });
-("../images/empty-circle.svg");
+
+console.log(indicatorContainer);
 indicatorContainer.addEventListener("click", function (e) {
   const clicked = e.target;
   if (!clicked.dataset.indNum) return;
@@ -36,20 +49,9 @@ indicatorContainer.addEventListener("click", function (e) {
   slideHandler(clicked.dataset.indNum);
 });
 
-menuToggle.addEventListener("click", function () {
-  hiddenMenu.classList.toggle("-translate-y-60");
-  overlay.classList.toggle("hidden");
-  menuToggle.querySelector("img").src =
-    menuToggle.querySelector("img").src ===
-    "http://127.0.0.1:5500/images/menu-icon.svg"
-      ? "http://127.0.0.1:5500/images/xMark.svg"
-      : "http://127.0.0.1:5500/images/menu-icon.svg";
-});
+menuToggle.addEventListener("click", () => toggler());
 
-overlay.addEventListener("click", function () {
-  overlay.classList.add("hidden");
-  hiddenMenu.classList.add("-translate-y-48");
-});
+overlay.addEventListener("click", () => toggler(true));
 
 emailBtn.addEventListener("click", function () {
   if (!emailInp.value.match(emailRegex)) emailErr.classList.remove("hidden");
