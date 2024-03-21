@@ -23,9 +23,9 @@ const slideHandler = function (slideNum) {
 const toggler = function (state) {
   hiddenMenu.classList.toggle("-translate-y-60");
 
-  if (menuIcon.src === "/images/menu-icon.svg")
-    menuIcon.src = "/images/xMark.svg";
-  else menuIcon.src = "/images/menu-icon.svg";
+  if (menuIcon.src === "images/menu-icon.svg")
+    menuIcon.src = "images/xMark.svg";
+  else menuIcon.src = "images/menu-icon.svg";
 
   if (state) return overlay.classList.toggle("hidden");
 
