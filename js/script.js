@@ -21,11 +21,16 @@ const slideHandler = function (slideNum) {
 
 const toggler = function (state) {
   hiddenMenu.classList.toggle("-translate-y-60");
-  menuToggle.querySelector("img").src =
+
+  if (
     menuToggle.querySelector("img").src ===
     "http://127.0.0.1:5500/images/menu-icon.svg"
-      ? "http://127.0.0.1:5500/images/xMark.svg"
-      : "http://127.0.0.1:5500/images/menu-icon.svg";
+  )
+    menuToggle.querySelector("img").src =
+      "http://127.0.0.1:5500/images/xMark.svg";
+  else
+    menuToggle.querySelector("img").src =
+      "http://127.0.0.1:5500/images/menu-icon.svg";
   if (state) return overlay.classList.toggle("hidden");
 
   overlay.classList.toggle("hidden");
