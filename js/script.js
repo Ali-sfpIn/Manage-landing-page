@@ -10,6 +10,7 @@ const overlay = document.querySelector(".overlay");
 const emailBtn = document.querySelector(".email-btn");
 const emailInp = document.querySelector(".email-inp");
 const emailErr = document.querySelector(".email-error-message");
+const menuIcon = document.getElementById("menu-icon");
 // State variables
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // FUNCTIONS...
@@ -22,19 +23,13 @@ const slideHandler = function (slideNum) {
 const toggler = function (state) {
   hiddenMenu.classList.toggle("-translate-y-60");
 
-  if (
-    menuToggle.querySelector("img").src ===
-    "http://127.0.0.1:5500/images/menu-icon.svg"
-  )
-    menuToggle.querySelector("img").src =
-      "http://127.0.0.1:5500/images/xMark.svg";
-  else
-    menuToggle.querySelector("img").src =
-      "http://127.0.0.1:5500/images/menu-icon.svg";
+  if (menuIcon.src === "http://127.0.0.1:5500/images/menu-icon.svg")
+    menuIcon.src = "http://127.0.0.1:5500/images/xMark.svg";
+  else menuIcon.src = "http://127.0.0.1:5500/images/menu-icon.svg";
+
   if (state) return overlay.classList.toggle("hidden");
 
   overlay.classList.toggle("hidden");
-  console.log(menuToggle.querySelector("img").src);
 };
 
 // EVENT HANDLERS

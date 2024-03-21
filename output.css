@@ -639,10 +639,6 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -669,58 +665,6 @@ video {
 
 .top-20 {
   top: 5rem;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
-.top-\[100px\] {
-  top: 100px;
-}
-
-.top-full {
-  top: 100%;
-}
-
-.top-3\/4 {
-  top: 75%;
-}
-
-.top-2\/3 {
-  top: 66.666667%;
-}
-
-.left-auto {
-  left: auto;
-}
-
-.right-auto {
-  right: auto;
-}
-
-.right-40 {
-  right: 10rem;
-}
-
-.right-60 {
-  right: 15rem;
-}
-
-.right-80 {
-  right: 20rem;
-}
-
-.right-72 {
-  right: 18rem;
-}
-
-.right-64 {
-  right: 16rem;
-}
-
-.right-96 {
-  right: 24rem;
 }
 
 .z-10 {
@@ -766,8 +710,8 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-28 {
-  margin-bottom: 7rem;
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-4 {
@@ -792,14 +736,6 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .block {
@@ -858,24 +794,16 @@ video {
   width: 1.5rem;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
 .w-\[99\%\] {
   width: 99%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-\[200px\] {
-  width: 200px;
 }
 
 .max-w-screen-sm {
@@ -1330,10 +1258,6 @@ body {
 @media (min-width: 640px) {
   .sm\:static {
     position: static;
-  }
-
-  .sm\:right-80 {
-    right: 20rem;
   }
 
   .sm\:order-none {
