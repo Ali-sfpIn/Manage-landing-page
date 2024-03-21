@@ -29,6 +29,7 @@ const toggler = function (state) {
   if (state) return overlay.classList.toggle("hidden");
 
   overlay.classList.toggle("hidden");
+  console.log(menuToggle.querySelector("img").src);
 };
 
 // EVENT HANDLERS
