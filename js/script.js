@@ -4,13 +4,14 @@ const indicatorContainer = document.querySelector(".indicator-container");
 const slides = document.querySelectorAll(".slide-item");
 const indicators = document.querySelectorAll(".indicator");
 const nav = document.querySelector("nav");
-const menuToggle = document.querySelector(".menu-icon");
+const menuToggle = document.querySelector(".menu-toggle");
 const hiddenMenu = document.querySelector(".hidden-menu");
 const overlay = document.querySelector(".overlay");
 const emailBtn = document.querySelector(".email-btn");
 const emailInp = document.querySelector(".email-inp");
 const emailErr = document.querySelector(".email-error-message");
-const menuIcon = document.getElementById("menu-icon");
+const menuIcon = document.querySelector(".menu-icon");
+const xIcon = document.querySelector(".x-icon");
 // State variables
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // FUNCTIONS...
@@ -22,11 +23,8 @@ const slideHandler = function (slideNum) {
 
 const toggler = function (state) {
   hiddenMenu.classList.toggle("-translate-y-60");
-
-  if (menuIcon.src === "http://127.0.0.1:5500/images/menu-icon.svg")
-    menuIcon.src = "http://127.0.0.1:5500/images/menu-icon.svg";
-  if (menuIcon.src === "http://127.0.0.1:5500/images/xMark.svg")
-    menuIcon.src = "http://127.0.0.1:5500/images/xMark.svg";
+  menuIcon.classList.toggle("hidden");
+  xIcon.classList.toggle("hidden");
   if (state) return overlay.classList.toggle("hidden");
 
   overlay.classList.toggle("hidden");
